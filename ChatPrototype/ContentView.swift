@@ -1,19 +1,21 @@
-//
-//  ContentView.swift
-//  ChatPrototype
-//
-//  Created by Yagnik Patel on 19/06/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 20) {
+            Image("hello")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 180, height: 100)
+            
+            Text("Swift Coding Club")
+                .padding()
+                .background(Color.orange, in: RoundedRectangle.init(cornerRadius:10))
+              
+            Text("Parul University!")
+                .foregroundStyle(Color.white)
+                .padding()
+                .background(Color.red, in: RoundedRectangle.init(cornerRadius: 10))
         }
         .padding()
     }
